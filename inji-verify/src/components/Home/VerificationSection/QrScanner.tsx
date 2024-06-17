@@ -42,31 +42,24 @@ function QrScanner({setActiveStep, setQrData}: {
     return (
         <div ref={scannerRef}>
             <Scanner
-                onScan={(text, result) => { 
-                    console.log(text,text);
+                onScan={(text) => {
                     setActiveStep(VerificationSteps.Verifying);
                     setQrData(text[0]['rawValue']);
                 }}
-                onError={(error) => {
-                    console.log('Clearing timeout - camera blocked');
-                    clearTimeout(timer);
-                    setIsCameraBlocked(true);
-                }}
-                options={{
-                    constraints: {
-                        "width": {
-                            "min": 640,
-                            "ideal": 720,
-                            "max": 1920
-                        },
-                        "height": {
-                            "min": 640,
-                            "ideal": 720,
-                            "max": 1080
-                        }
+
+                constraints={{
+                    "width": {
+                        "min": 640,
+                        "ideal": 720,
+                        "max": 1920
                     },
-                    delayBetweenScanSuccess: 100000 // Scan once
+                    "height": {
+                        "min": 640,
+                        "ideal": 720,
+                        "max": 1080
+                    }
                 }}
+                scanDelay={10000}
                 styles={{
                     container: {
                         width: "316px",
