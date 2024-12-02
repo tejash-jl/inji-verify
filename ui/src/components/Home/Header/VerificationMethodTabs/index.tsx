@@ -99,20 +99,20 @@ function VerificationMethodTabs(props: any) {
               label="Scan the QR Code"
               onClick={() => switchToVerificationMethod("SCAN")}
             />
-            <Tab
-              id="vp-verification-tab"
-              active={false}
-              label="VP Verification"
-              disabled
-              onClick={showAlert}
-            />
-            <Tab
-              id="ble-tab"
-              active={false}
-              label="BLE"
-              disabled
-              onClick={showAlert}
-            />
+            {/*<Tab*/}
+            {/*  id="vp-verification-tab"*/}
+            {/*  active={false}*/}
+            {/*  label="VP Verification"*/}
+            {/*  disabled*/}
+            {/*  onClick={showAlert}*/}
+            {/*/>*/}
+            {/*<Tab*/}
+            {/*  id="ble-tab"*/}
+            {/*  active={false}*/}
+            {/*  label="BLE"*/}
+            {/*  disabled*/}
+            {/*  onClick={showAlert}*/}
+            {/*/>*/}
           </div>
         </div>
         <div className="absolute right-0 h-full w-12 bg-light-gradient md:hidden grid items-center">

@@ -14,7 +14,8 @@ ENV INTERNET_CONNECTIVITY_CHECK_TIMEOUT=$internetConnectivityCheckTimeout
 ENV OVP_QR_HEADER=$ovpQrHeader
 
 # Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+COPY package.json .
+COPY package-lock.json .
 
 # Cop the patch files required for the verification sdk
 COPY patches/* ./patches/

@@ -97,7 +97,7 @@ function Navbar(props: any) {
                     <MenuIcon id="menu-icon" style={{width: "25px", height: "19px"}}/>
                 </button>
                 <a href={Pages.Home} className="flex items-center">
-                    <Logo />
+                    <img src={"/assets/images/verify.png"} />
                 </a>
                 <DesktopMenu/>
                 <MobileDropDownMenu showMenu={showMenu}/>
