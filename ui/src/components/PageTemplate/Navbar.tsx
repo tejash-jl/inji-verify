@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import { Logo } from '../../utils/theme-utils';
+// import { Logo } from '../../utils/theme-utils';
 import {ReactComponent as MenuIcon} from "../../assets/burger-menu-svgrepo-com.svg";
 import { MdArrowForwardIos } from "react-icons/md";
 import { MdExpandLess } from "react-icons/md";
 import {ReactComponent as NewTabIcon} from "../../assets/new-tab.svg";
 import {Pages} from "../../utils/config";
-
+import logo from "../../assets/images/verify_colombo.png";
 const SubMenu = () => {
     return (
         <div id="help-submenu"
@@ -97,7 +97,7 @@ function Navbar(props: any) {
                     <MenuIcon id="menu-icon" style={{width: "25px", height: "19px"}}/>
                 </button>
                 <a href={Pages.Home} className="flex items-center">
-                    <img src={"/assets/images/verify.png"} style={{height:'70px'}}/>
+                    <img src={logo} style={{height:'50px',objectFit:'fill'}}/>
                 </a>
                 <DesktopMenu/>
                 <MobileDropDownMenu showMenu={showMenu}/>
